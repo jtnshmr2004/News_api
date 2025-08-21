@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini News</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>🗞️ Mini News</h1>
+      <p class="muted">Clean, tiny, and fast.</p>
+      <form id="searchForm" class="row">
+        <input id="searchInput" type="text" placeholder="Search news (e.g., cricket, AI, space)" />
+        <button type="submit">Search</button>
+      </form>
+      <div class="row">
+        <label>
+          Country
+          <select id="countrySelect">
+            <option value="in">India</option>
+            <option value="us">USA</option>
+            <option value="gb">UK</option>
+            <option value="au">Australia</option>
+          </select>
+        </label>
+        <div class="chip-row">
+          <button class="chip" data-category="">All</button>
+          <button class="chip" data-category="technology">Technology</button>
+          <button class="chip" data-category="sports">Sports</button>
+          <button class="chip" data-category="business">Business</button>
+          <button class="chip" data-category="science">Science</button>
+          <button class="chip" data-category="health">Health</button>
+          <button class="chip" data-category="entertainment">Entertainment</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="status" class="status"></div>
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <footer class="container">
+      <p class="muted small">Powered by your local server. Your API key stays secret.</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

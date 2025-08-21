@@ -1,0 +1,91 @@
+:root {
+  --bg: #0b0c10;
+  --card: #111218;
+  --text: #f2f3f5;
+  --muted: #9aa2b1;
+  --ring: #2b2f3a;
+}
+
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+
+.container { width: min(1100px, 92%); margin: 24px auto; }
+header h1 { margin: 0 0 6px; font-size: 28px; }
+.muted { color: var(--muted); margin: 0 0 12px; }
+.small { font-size: 12px; }
+
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+#searchForm input {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--ring);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  outline: none;
+}
+#searchForm button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--ring);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+label select {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--ring);
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+.chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  background: transparent;
+  border: 1px solid var(--ring);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.status { margin: 16px 0; min-height: 22px; color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #222;
+}
+
+.card .body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.card .title { font-size: 16px; margin: 0; }
+.card .meta { color: var(--muted); font-size: 12px; }
+.card a {
+  margin-top: auto;
+  text-decoration: none;
+  border: 1px solid var(--ring);
+  border-radius: 12px;
+  padding: 8px 10px;
+  color: var(--text);
+  text-align: center;
+}
